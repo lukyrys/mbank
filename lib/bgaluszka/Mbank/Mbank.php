@@ -14,7 +14,7 @@ class Mbank
 
     protected $opts = array();
 
-    public $url = 'https://online.mbank.pl';
+    public $url = 'https://online.mbank.cz';
 
     public function __construct()
     {
@@ -47,12 +47,12 @@ class Mbank
     public function login($username, $password)
     {
         $opts = array(
-            CURLOPT_URL => $this->url . '/pl/Login',
+            CURLOPT_URL => $this->url . '/cs/Login',
         );
         $response = $this->curl($opts);
 
         $opts = array(
-            CURLOPT_URL => $this->url . '/pl/Account/JsonLogin',
+            CURLOPT_URL => $this->url . '/cs/Account/JsonLogin',
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => array(
                 'UserName' => $username,
@@ -70,7 +70,7 @@ class Mbank
         $this->tab = $response['tabId'];
 
         $opts = array(
-            CURLOPT_URL => $this->url . '/pl',
+            CURLOPT_URL => $this->url . '/cs',
         );
         $response = $this->curl($opts);
 
@@ -93,7 +93,7 @@ class Mbank
         }
 
         $opts = array(
-            CURLOPT_URL => $this->url . '/pl/LoginMain/Account/JsonActivateProfile',
+            CURLOPT_URL => $this->url . '/cs/LoginMain/Account/JsonActivateProfile',
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => array(
                 'profileCode' => $profiles[$profile],
@@ -106,7 +106,7 @@ class Mbank
     public function accounts()
     {
         $opts = array(
-            CURLOPT_URL => $this->url . '/pl/Accounts/Accounts/List',
+            CURLOPT_URL => $this->url . '/cs/Accounts/Accounts/List',
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => array(),
             CURLOPT_HTTPHEADER => array('X-Requested-With: XMLHttpRequest'),
@@ -138,7 +138,7 @@ class Mbank
     {
         if ($iban) {
             $opts = array(
-                CURLOPT_URL => $this->url . '/pl/MyDesktop/Desktop/SetNavigationToAccountHistory',
+                CURLOPT_URL => $this->url . '/cs/MyDesktop/Desktop/SetNavigationToAccountHistory',
                 CURLOPT_POST => true,
                 CURLOPT_POSTFIELDS => array(
                     'accountNumber' => $iban,
@@ -150,7 +150,7 @@ class Mbank
         }
 
         $opts = array(
-            CURLOPT_URL => $this->url . '/pl/Pfm/TransactionHistory',
+            CURLOPT_URL => $this->url . '/cs/Pfm/TransactionHistory',
         );
 
         $response = $this->curl($opts);
@@ -175,7 +175,7 @@ class Mbank
                 $criteria = json_encode($criteria);
 
                 $opts = array(
-                    CURLOPT_URL => $this->url . '/pl/Pfm/TransactionHistory/TransactionList',
+                    CURLOPT_URL => $this->url . '/cs/Pfm/TransactionHistory/TransactionList',
                     CURLOPT_POST => true,
                     CURLOPT_POSTFIELDS => $criteria,
                     CURLOPT_HTTPHEADER => array(
@@ -313,7 +313,7 @@ class Mbank
     public function logout()
     {
         $opts = array(
-            CURLOPT_URL => $this->url . '/pl/Account/Logout',
+            CURLOPT_URL => $this->url . '/cs/Account/Logout',
         );
 
         return $this->curl($opts);
