@@ -1,4 +1,4 @@
-## Library for accessing mBank PL transaction service
+## Library for accessing mBank CZ transaction service
 
 Suitable for checking for new transactions. Implemented methods:
 
@@ -19,7 +19,7 @@ Install library from composer:
 ```json
 {
     "require": {
-        "bgaluszka/mbank": "dev-master"
+        "lukyrys/mbank": "dev-master"
     }
 }
 ```
