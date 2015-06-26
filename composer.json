@@ -1,15 +1,21 @@
 {
-    "name": "bgaluszka/mbank",
+    "name": "lukyrys/mbank",
     "type": "library",
-    "description": "Library for accessing mBank PL transaction service",
+    "description": "Library for accessing mBank CZ transaction service. Forked from bgaluszka/mbank",
     "keywords": ["mbank","api"],
-    "homepage": "https://github.com/bgaluszka/mbank",
+    "homepage": "https://github.com/lukyrys/mbank",
     "license": "MIT",
     "authors": [
         {
             "name": "Bartosz Gałuszka",
             "email": "bgaluszka@kint.pl",
             "homepage": "http://kint.pl",
+            "role": "Developer"
+        },
+        {
+            "name": "LuRy",
+            "email": "lury@lury.cz",
+            "homepage": "http://lury.cz",
             "role": "Developer"
         }
     ],
