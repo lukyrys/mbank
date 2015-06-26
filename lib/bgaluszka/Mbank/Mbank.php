@@ -268,23 +268,16 @@ class Mbank
         );
 
         $accoperlist_typefilter_group = array(
-            'ALL000000' => 'Wszystkie',
-            'ABO000000' => 'Uznania rachunku',
-            'CAR000000' => 'Obciążenia rachunku',
-            'TRI111000' => 'Przelewy przychodzące',
-            'TRO111000' => 'Przelewy wychodzące',
-            'TIH111000' => 'Przelewy własne',
-            'TUS111000' => 'Przelewy podatkowe',
-            'TRZ101000' => 'Przelewy do ZUS',
-            'LDS100000' => 'Operacje kartowe',
-            'CRE100000' => 'Operacje na kredycie',
-            'CAI100000' => 'Wpłaty gotówkowe',
-            'CAO100000' => 'Wypłaty gotówkowe',
-            'INT000000' => 'Kapitalizacja odsetek',
-            'COM100000' => 'Prowizje i opłaty',
-            'TDI111000' => 'Przelew z/na r-ek brokerski',
-            'TFX111000' => 'Transakcje walutowe',
-            'TRS000000' => 'Regularne oszczędzanie',
+            'ALL000000' => 'Všechny',
+            'ABO000000' => 'Příchozí',
+            'CAR000000' => 'Odchozí',
+            'TRI111111' => 'Příchozí platební převody',
+            'TRO111111' => 'Odchozí platební převody',
+            'LDS100000' => 'Karetní transakce',
+            'CRE100000' => 'Transakce spojené s úvěrem',
+            'CAO100000' => 'Hotovostní výběry',
+            'INT000000' => 'Připsání úroků',
+            'COM100000' => 'Poplatky',
         );
 
         if (!isset($accoperlist_typefilter_group[$params['accoperlist_typefilter_group']])) {
