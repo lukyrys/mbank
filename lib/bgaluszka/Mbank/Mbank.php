@@ -121,6 +121,7 @@ class Mbank
                 foreach ($property as $account) {
                     $accounts[$account['cID']] = array(
                         'profile' => $response['properties']['profile'],
+                        'description' => $account['cSubTitle'],
                         'name' => $account['cProductName'],
                         'iban' => $account['cAccountNumberForDisp'],
                         'value' => $account['mAvailableBalance'],
